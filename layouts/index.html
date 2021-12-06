@@ -56,7 +56,7 @@
         <div class="mission-content">
           <h2><span class="rev">{{ .title | markdownify}}</span></h2>
           <p>{{ .content | markdownify }}</p>
-
+          {{ if .video }}
           <div class="video image-reveal">
             <a class="video-play"
               data-video="https://www.youtube.com/embed/{{.video_id}}?autoplay=1&showinfo=0&controls=0">
@@ -64,6 +64,7 @@
               <i class="fa fa-play"></i>
             </a>
           </div>
+          {{ end }}
         </div>
       </div>
     </div>
@@ -138,7 +139,7 @@
               <div class="content">
                 <h5>{{ .title | markdownify }}</h5>
                 <p>{{ .content | markdownify }}</p>
-                <a href="{{ .project_url | absURL }}">Learn More</a>
+                <a href="{{ .project_url | absURL }}">Buy now</a>
               </div>
             </div>
           </div>
