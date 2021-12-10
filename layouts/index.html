@@ -133,7 +133,9 @@
               <div class="content">
                 <h5>{{ .title | markdownify }}</h5>
                 <p>{{ .content | markdownify }}</p>
-                <a href="{{ .project_url | absURL }}">Buy now</a>
+                {{ if .project_url }}
+                  <a href="{{ .project_url | absURL }}">Buy now</a>
+                {{ end }}
               </div>
             </div>
           </div>
