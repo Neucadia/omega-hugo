@@ -175,15 +175,6 @@
         <img src="{{ .image |absURL}}" alt="office">
         <div class="address">
           <h2>{{ site.Params.contact_info | markdownify}}</h2>
-          <ul class="social-list list-inline">
-            {{ range site.Params.social }}
-            <li class="list-inline-item">
-              <a href="{{ .link | safeURL }}" target="_blank">
-                <i class="fa {{ .icon }}"></i>
-              </a>
-            </li>
-            {{ end }}
-          </ul>
         </div>
       </div>
     </div>
